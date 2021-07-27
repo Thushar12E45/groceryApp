@@ -28,8 +28,10 @@ function App() {
     setItemList(itemList.filter((item) => item.id !== id));
   };
 
-  const updateItem = (item) => {
-    const updatedList = itemList.map((itm) => (itm.id === item.id ? { ...item } : itm));
+  const updateItem = (updatedItem) => {
+    const updatedList = itemList.map((item) =>
+      item.id === updatedItem.id ? { ...updatedItem } : item
+    );
     setItemList(updatedList);
   };
 

@@ -13,7 +13,12 @@ const Items = ({ items, onDelete, onUpdate }) => (
     </thead>
     <tbody>
       {items.map((item) => (
-        <Item key={item.id} itm={item} onDelete={onDelete} onUpdate={onUpdate} />
+        <Item
+          key={item.id}
+          itm={item}
+          onDelete={onDelete}
+          onUpdate={onUpdate}
+        />
       ))}
     </tbody>
     <tfoot>
@@ -21,7 +26,13 @@ const Items = ({ items, onDelete, onUpdate }) => (
         <td>Total Cost </td>
         <td />
         <td />
-        <td>{items.reduce((totalCost, item) => totalCost + item.noOfItems * item.priceOfEachItem, 0)}</td>
+        <td>
+          {items.reduce(
+            (totalCost, item) =>
+              totalCost + item.noOfItems * item.priceOfEachItem,
+            0
+          )}
+        </td>
         <td />
       </tr>
     </tfoot>

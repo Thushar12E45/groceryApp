@@ -19,7 +19,13 @@ const AddItems = ({ addItem }) => {
     <form onSubmit={onSubmit}>
       <div>
         <label> Item </label>
-        <input type="text" required placeholder="Item Name" value={item} onChange={(e) => setItem(e.target.value)} />
+        <input
+          type="text"
+          required
+          placeholder="Item Name"
+          value={item}
+          onChange={(e) => setItem(e.target.value)}
+        />
       </div>
       <div>
         <label> Quantity </label>
